@@ -1,33 +1,73 @@
-# Mixmi Profile Project
+# Mixmi Profile
 
-A Next.js-based profile page system with Web3 authentication and rich media features.
+A decentralized profile platform built with Next.js, Stacks, and Tailwind CSS.
 
-## Core Features
+## Features
 
-- Stacks wallet authentication
-- Profile editing with image cropping
-- Media embeds (YouTube, SoundCloud, Apple Music)
-- Project showcase with consistent square image cards
-- Enhanced placeholder content
-- Shop/Store management with image uploads
+- 🔐 Stacks Wallet Authentication
+- 👤 Customizable Profile
+- 🎯 Spotlight Section for Projects & Collaborations
+- 🎵 Media Embeds (YouTube, SoundCloud, Spotify, Apple Music)
+- 🛍️ Shop Integration
+- 🎨 Custom Profile Stickers
+- 💾 Local Storage Persistence
+- 🌗 Dark Mode
+
+## Tech Stack
+
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- Shadcn/ui Components
+- Stacks.js
+- React Image Crop
 
 ## Project Structure
 
-newer-profile-test/
-├── app/
-│ ├── page.tsx                    # Main entry point
-│ └── components/
-│     ├── profile/               # Profile-specific components
-│     │   ├── SocialLinks.tsx    # Social media links management
-│     │   ├── SpotlightSection.tsx # Projects/spotlight section
-│     │   └── MediaSection.tsx   # Media embeds management
-│     ├── media/
-│     │   └── MediaEmbed.tsx     # Media embedding component
-│     └── ui/                    # Shared UI components
+app/
+├── components/
+│   ├── profile/
+│   │   ├── MediaSection.tsx
+│   │   ├── ShopSection.tsx
+│   │   ├── SocialLinks.tsx
+│   │   ├── SpotlightSection.tsx
+│   │   └── StickerSection.tsx
+│   ├── media/
+│   │   └── MediaEmbed.tsx
+│   └── ui/
+│       ├── accordion.tsx
+│       ├── avatar.tsx
+│       ├── button.tsx
+│       ├── card.tsx
+│       ├── checkbox.tsx
+│       ├── input.tsx
+│       ├── label.tsx
+│       ├── select.tsx
+│       └── textarea.tsx
+├── lib/
+│   ├── auth.ts
+│   └── example-content.ts
 ├── types/
-│ └── media.ts                   # Media-related type definitions
-└── public/
-    └── images/                  # Static assets
+│   └── stacks.d.ts
+├── public/
+│   └── images/
+├── globals.css
+├── layout.tsx
+├── page.tsx
+└── providers.tsx
+├── .env.local
+├── .eslintrc.json
+├── .gitignore
+├── components.json
+├── next-env.d.ts
+├── next.config.js
+├── next.config.mjs
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── tailwind.config.js
+├── tailwind.config.ts
+└── tsconfig.json
 
 ## Recent Updates
 
@@ -39,10 +79,14 @@ newer-profile-test/
 - ✅ Added proper TypeScript types for all components
 
 ### Next Steps
-- [ ] Extract Shop section into component
+- [x] Extract Shop section into component
+- [x] Extract Sticker section into component
 - [ ] Create shared ImageUpload component
 - [ ] Add error boundaries
 - [ ] Improve loading states
+- [ ] Add image optimization for uploads
+- [ ] Implement proper error handling for media embeds
+- [ ] Add unit tests for components
 
 ## Development Guidelines
 
